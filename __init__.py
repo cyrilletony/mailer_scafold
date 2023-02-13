@@ -1,4 +1,4 @@
-import datetime, os
+import datetime, os, pymysql
 from flask import *
 from flask_babelex import Babel
 from flask_sqlalchemy import SQLAlchemy
