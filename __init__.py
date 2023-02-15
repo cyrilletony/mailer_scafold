@@ -24,8 +24,8 @@ db = SQLAlchemy(app)
 
 #calls database classes from database folder
 from database.database import *
-
 app.config['SESSION_SQLALCHEMY'] = db
-
+# with app.app_context():
+#     db.create_all()
 #user manager
 user_manager = UserManager(app, db, User)

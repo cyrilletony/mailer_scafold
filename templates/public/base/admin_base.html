@@ -1,0 +1,23 @@
+{% extends "public/base/main_base.html"%}
+{% block body %}
+  <body>
+    <div
+      class="flex h-screen bg-gray-50 dark:bg-gray-900"
+      :class="{ 'overflow-hidden': isSideMenuOpen }"
+    >
+      <!-- Desktop sidebar -->
+      {% include "public/includes/desktop_side_bar.html" %}
+      <!-- Backdrop -->
+      {% include "public/includes/backdrop.html" %}
+      <!-- Mobile sidebar -->
+      {% include "public/includes/mobile_side_bar.html" %}
+
+      <div class="flex flex-col flex-1 w-full">
+      <!-- Header -->
+      {% include "public/includes/header.html" %}
+      {% block main%}
+      {% endblock %}
+      </div>
+    </div>
+  </body>
+  {% endblock %}
